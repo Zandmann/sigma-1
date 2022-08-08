@@ -107,7 +107,14 @@ logsources:
         product: windows
         service: bits-client
         conditions:
-            channel: 'Microsoft-Windows-Bits-Client/Operational' 
+            channel: 'Microsoft-Windows-Bits-Client/Operational'
+    windows-security-mitigations:
+        product: windows
+        service: security-mitigations
+        conditions:
+            channel:
+            - 'Microsoft-Windows-Security-Mitigations/Kernel Mode'
+            - 'Microsoft-Windows-Security-Mitigations/User Mode'
     linux:
         product: linux
         index: posix

@@ -97,10 +97,17 @@ logsources:
     product: windows
     service: firewall-as
     conditions:
-      Channel: 'Microsoft-Windows-Windows Firewall With Advanced Security/Firewall'     
+      Channel: 'Microsoft-Windows-Windows Firewall With Advanced Security/Firewall'
   windows-bits-client:
     product: windows
     service: bits-client
     conditions:
-      Channel: 'Microsoft-Windows-Bits-Client/Operational'       
+      Channel: 'Microsoft-Windows-Bits-Client/Operational'
+  windows-security-mitigations:
+    product: windows
+    service: security-mitigations
+    conditions:
+      Channel:
+        - 'Microsoft-Windows-Security-Mitigations/Kernel Mode'
+        - 'Microsoft-Windows-Security-Mitigations/User Mode'
 defaultindex: logstash-*

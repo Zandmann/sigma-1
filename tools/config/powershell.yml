@@ -116,9 +116,16 @@ logsources:
     product: windows
     service: firewall-as
     conditions:
-      log_name: 'Microsoft-Windows-Windows Firewall With Advanced Security/Firewall'       
+      LogName: 'Microsoft-Windows-Windows Firewall With Advanced Security/Firewall'
   windows-bits-client:
     product: windows
     service: bits-client
     conditions:
-      log_name: 'Microsoft-Windows-Bits-Client/Operational' 
+      LogName: 'Microsoft-Windows-Bits-Client/Operational'
+  windows-security-mitigations:
+    product: windows
+    service: security-mitigations
+    conditions:
+      LogName:
+        - 'Microsoft-Windows-Security-Mitigations/Kernel Mode'
+        - 'Microsoft-Windows-Security-Mitigations/User Mode'

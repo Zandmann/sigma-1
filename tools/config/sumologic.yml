@@ -110,7 +110,14 @@ logsources:
     product: windows
     service: bits-client
     conditions:
-      EventChannel: 'Microsoft-Windows-Bits-Client/Operational' 
+      EventChannel: 'Microsoft-Windows-Bits-Client/Operational'
+  windows-security-mitigations:
+    product: windows
+    service: security-mitigations
+    conditions:
+      EventChannel:
+        - 'Microsoft-Windows-Security-Mitigations/Kernel Mode'
+        - 'Microsoft-Windows-Security-Mitigations/User Mode'
   apache:
     service: apache
     index: WEBSERVER

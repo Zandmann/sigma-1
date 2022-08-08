@@ -81,7 +81,14 @@ logsources:
     product: windows
     service: bits-client
     conditions:
-      event_source: 'Microsoft-Windows-Bits-Client/Operational' 
+      event_source: 'Microsoft-Windows-Bits-Client/Operational'
+  windows-security-mitigations:
+    product: windows
+    service: security-mitigations
+    conditions:
+      event_source:
+          - 'Microsoft-Windows-Security-Mitigations/Kernel Mode'
+          - 'Microsoft-Windows-Security-Mitigations/User Mode'
 fieldmappings:
     EventID: event_id
     FailureCode: result_code
